@@ -51,6 +51,18 @@ export type MessageFieldKey<E extends EntityKey> = E extends keyof MessageFields
 
 export const REQUIRED_MESSAGES: { [E in EntityKey]?: Partial<Record<MessageFieldKey<E>, string>> } = {
   // <custom:messages>
+  kunden: { firmenname: "Bitte den Firmennamen eingeben." },
+  kundenanfragen: { kunde: "Bitte einen Kunden auswählen.", eingangsdatum: "Bitte das Eingangsdatum wählen.", anfragebeschreibung: "Bitte die Anfrage kurz beschreiben.", urspruengliche_kundenanforderungen: "Bitte die Kundenanforderungen eintragen." },
+  technischer_abschluss: { anfrage: "Bitte eine Anfrage auswählen." },
+  technische_anforderungen: { anfrage: "Bitte eine Anfrage auswählen.", bezeichnung: "Bitte eine Bezeichnung eingeben.", beschreibung: "Bitte die Anforderung beschreiben." },
+  informationsquellen: { anfrage: "Bitte eine Anfrage auswählen.", titel: "Bitte einen Titel eingeben." },
+  offene_punkte: { anfrage: "Bitte eine Anfrage auswählen.", kurztitel: "Bitte einen Kurztitel eingeben.", beschreibung: "Bitte Beschreibung und Grund eintragen.", verantwortlicher: "Bitte einen Verantwortlichen eintragen." },
+  aufgaben: { anfrage: "Bitte eine Anfrage auswählen.", titel: "Bitte einen Titel eingeben.", verantwortlicher: "Bitte einen Verantwortlichen eintragen." },
+  beurteilungen: { anfrage: "Bitte eine Anfrage auswählen.", beurteilungsgegenstand: "Bitte den Beurteilungsgegenstand eingeben.", fachliche_begruendung: "Bitte die fachliche Begründung eintragen." },
+  rueckfragen_und_kommunikation: { anfrage: "Bitte eine Anfrage auswählen.", betreff: "Bitte einen Betreff eingeben.", inhalt: "Bitte den Nachrichtentext eintragen." },
+  entscheidungen: { anfrage: "Bitte eine Anfrage auswählen.", titel: "Bitte einen Titel eingeben.", entscheidungsgegenstand: "Bitte den Entscheidungsgegenstand beschreiben.", entscheidung: "Bitte die Entscheidung eintragen.", begruendung: "Bitte die Begründung eintragen.", entscheidungsverantwortlicher: "Bitte den Entscheidungsverantwortlichen eintragen." },
+  erfahrungen_und_erkenntnisse: { ursprungs_anfrage: "Bitte die ursprüngliche Anfrage auswählen.", titel: "Bitte einen Titel eingeben.", sachverhalt: "Bitte den Sachverhalt beschreiben." },
+  wiederverwendung_von_erfahrungen: { erfahrung: "Bitte eine Erfahrung auswählen.", ziel_anfrage: "Bitte die spätere Anfrage auswählen." },
   // </custom:messages>
 };
 

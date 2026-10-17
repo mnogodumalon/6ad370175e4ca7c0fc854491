@@ -20,6 +20,7 @@
 import type { ComponentType } from 'react';
 
 // <custom:intent-imports>
+import { IconFilePlus, IconListDetails, IconAlertTriangle, IconMessageQuestion, IconMessageCheck, IconGavel } from '@tabler/icons-react';
 // </custom:intent-imports>
 
 export interface IntentLink {
@@ -42,6 +43,12 @@ export interface IntentLink {
 
 export const INTENTS: IntentLink[] = [
   // <custom:intents>
+  { path: '/intents/anfrage-aufnehmen', label: { de: 'Anfrage aufnehmen', en: 'Record inquiry' }, icon: IconFilePlus, description: 'Kunden wählen, Anfrage mit Anforderungen erfassen, Verantwortlichen und Klärungstermin festlegen, erste Quelle zuordnen.' },
+  { path: '/intents/anforderungen-erfassen', label: { de: 'Anforderungen erfassen', en: 'Capture requirements' }, icon: IconListDetails, description: 'Zu einer Anfrage technische Anforderungen mit Herkunft und Quelle strukturiert anlegen.' },
+  { path: '/intents/offenen-punkt-anlegen', label: { de: 'Offenen Punkt anlegen', en: 'Create open item' }, icon: IconAlertTriangle, description: 'Fehlende Angaben, Widersprüche oder Risiken als offenen Punkt mit Verantwortlichem erfassen und optional eine Aufgabe ableiten.' },
+  { path: '/intents/rueckfrage-vorbereiten', label: { de: 'Rückfrage vorbereiten', en: 'Prepare inquiry message' }, icon: IconMessageQuestion, description: 'Aus offenen Punkten einen Nachrichtenentwurf erstellen. Der Entwurf ist kein Versand.' },
+  { path: '/intents/antwort-zuordnen', label: { de: 'Antwort zuordnen', en: 'Assign reply' }, icon: IconMessageCheck, description: 'Eingegangene Antwort erfassen, Rückfrage und offenen Punkten zuordnen, Stand bewerten, Folgeaufgabe anlegen.' },
+  { path: '/intents/entscheidung-dokumentieren', label: { de: 'Entscheidung dokumentieren', en: 'Document decision' }, icon: IconGavel, description: 'Entscheidung auf Basis von Beurteilungen festhalten und verknüpfen; frühere Entscheidung als ersetzt markieren.' },
   // </custom:intents>
 ];
 
@@ -52,7 +59,7 @@ export const INTENTS: IntentLink[] = [
  * purpose — a scaffold update resets it to false (self-healing if Phase 2
  * never ran).
  */
-export const INTENTS_PENDING = true;
+export const INTENTS_PENDING = false;
 
 /**
  * When the Phase-1 bundle was deployed (ISO, set by the service together with
